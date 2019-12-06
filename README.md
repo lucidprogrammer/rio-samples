@@ -2,7 +2,7 @@
 # Example for using rio to watch a repo
 
 
-Rio brings up the service [definition](deployments/my-stack.yaml). Compare it with the complexity of the various yamls. With the ability to do an end to end CI/CD, it makes it easy for apps in K8s.
+Rio brings up the service [definition](deployments/my-stack.yaml) with [values](deployments/values-my-stack.json). Compare it with the complexity of the various K8 yamls. With the ability to do an end to end CI/CD, it makes it easy for apps in K8s. Example secrets used are available [here](secrets/)
 
 Refer to riofile [README](https://github.com/rancher/rio/blob/master/docs/riofile.md) for detailed documentation.
 
