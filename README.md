@@ -4,6 +4,8 @@
 
 Rio brings up the service [definition](deployments/my-stack.yaml). Compare it with the complexity of the various yamls. With the ability to do an end to end CI/CD, it makes it easy for apps in K8s.
 
+Refer to riofile [README](https://github.com/rancher/rio/blob/master/docs/riofile.md) for detailed documentation.
+
 ```bash
 namespace=something
 kubectl create namespace ${namespace}
