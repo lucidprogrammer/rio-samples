@@ -1,6 +1,7 @@
-const express = require('express');
+import express from 'express';
+import sleep from 'sleep';
 const app = express();
-const sleep = require('sleep');
+
 let port = 3000;
 const revision = `Revision is ${process.env.REVISION} and namespace is ${process.env.NAMESPACE}`;
 app.get('/', (req, res) => {
