@@ -2,7 +2,9 @@
 # Example for using rio to watch a repo
 
 
-Rio brings up the service [definition](deployments/my-stack.yaml) with [values](deployments/values-my-stack.json). Compare it with the complexity of the various K8 yamls. With the ability to do an end to end CI/CD, it makes it easy for apps in K8s. Example secrets used are available [here](deployments/secrets/)
+Rio brings up the service [definition](deployments/my-stack.yaml) with [values](deployments/values-my-stack.json). Compare it with the complexity of the various K8 yamls. With the ability to do an end to end CI/CD, it makes it easy for apps in K8s. Example secrets used are available [here](deployments/secrets/). Just to be clear, the secret folder is shown to show how the yamls are structured. Keep it in something like s3 and put the secrets folder in .gitignore. Alternatively you could use bitnami sealed secrets.
+
+
 
 Refer to riofile [README](https://github.com/rancher/rio/blob/master/docs/riofile.md) for detailed documentation.
 
