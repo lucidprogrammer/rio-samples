@@ -1,5 +1,8 @@
 FROM node:13.3.0-alpine3.10
 
+ARG COMMIT_HASH
+ENV REVISION ${COMMIT_HASH}
+
 RUN apk add --no-cache tini
 
 RUN mkdir /web
