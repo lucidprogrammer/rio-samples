@@ -1,0 +1,64 @@
+template:
+    goTemplate: true
+    envSubst: true
+    questions:
+        - variable: NAMESPACE
+          description: "namespace to deploy to"
+    
+services:
+    discover:
+        version: v0
+        weight: 100
+        stageOnly: false
+        ports:
+        - 80:3000/http
+        image: lucidprogrammer/discover:latest
+        imagePullPolicy: Always
+    
+
+routers:
+  distributor:
+    routes:
+      - match:
+          path:
+            exact: /
+        to:
+          - app: discover
+            version: v0
+  
+      - match:
+          path:
+            exact: /some
+          headers:
+            - name: app
+              value:
+                exact: some
+            - name: org
+              value:
+                exact: customer1
+        to:
+          - app: some
+            version: v0
+            namespace: customer1
+            weight: 100
+            port: 80
+      - match:
+          path:
+            exact: /some
+          headers:
+            - name: app
+              value:
+                exact: some
+            - name: org
+              value:
+                exact: customer2
+        to:
+          - app: some
+            version: v0
+            namespace: customer2
+            weight: 100
+            port: 80
+            
+
+
+                      

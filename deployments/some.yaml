@@ -1,0 +1,22 @@
+template:
+    goTemplate: true
+    envSubst: true
+    questions:
+        - variable: NAMESPACE
+          description: "namespace to deploy to"
+                                
+services:
+  some:
+    version: v0
+    app: some
+    weight: 100
+    stageOnly: false
+    ports:
+    - 80:80/http
+    env:
+    - NAMESPACE=${NAMESPACE}
+    - PORT=80
+    image: lucidprogrammer/web1:latest
+    imagePullPolicy: Always
+
+     

@@ -29,3 +29,12 @@ rio -n ${namespace} up --name somename  --push-registry-secret dockerconfig \
 
 hey -z 600s -c 60 endpointurlofweb1service
 ```
+
+## Routing sample
+
+
+| domain        | route              | header                   | service  | namespace |
+| ------------- | -------------      | -------------            |-----     |-----      |
+| app.acme.com  | /                  | no headers               |discover  | default   |
+| app.acme.com  | /some              | org=customer1,app=some   |web1      | customer1 |
+| app.acme.com  | /some              | org=customer2,app=some   |web2      | customer2 |

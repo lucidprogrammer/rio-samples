@@ -11,6 +11,6 @@ COPY package.json /web
 
 RUN cd /web && npm install
 COPY *.js /web
-
+LABEL REVISION="${COMMIT_HASH}"
 ENTRYPOINT [ "tini","--" ]
 CMD ["node","--prof","/web/index.js"]

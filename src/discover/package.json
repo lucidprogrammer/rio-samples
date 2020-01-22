@@ -1,18 +1,21 @@
 {
-  "name": "web",
+  "name": "discover",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "test": "mocha --exit"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "fastify": "^2.11.0",
+    "fastify-multipart": "^1.0.4",
+    "fastify-static": "^2.5.1"
   },
   "devDependencies": {
+    "mocha": "^7.0.0",
     "nodemon": "^2.0.2"
   }
 }
