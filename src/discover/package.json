@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "fastify": "^2.11.0",
-    "fastify-multipart": "^1.0.4",
+    "fastify-multipart": "^5.3.1",
     "fastify-static": "^2.5.1"
   },
   "devDependencies": {
