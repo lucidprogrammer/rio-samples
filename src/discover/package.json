@@ -15,7 +15,7 @@
     "fastify-static": "^2.5.1"
   },
   "devDependencies": {
-    "mocha": "^7.0.0",
+    "mocha": "^10.2.0",
     "nodemon": "^2.0.2"
   }
 }
